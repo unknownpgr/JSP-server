@@ -8,7 +8,7 @@
 <html>
 
 <head>
-	<title>Main page</title>
+<title>Main page</title>
 </head>
 
 <body>
@@ -23,14 +23,17 @@
 		<div>List of post</div>
 		<form action="./" method="GET">
 			<div>
-				Search : <input type="text" name="query"> <input type="submit" value="search">
+				<%
+					String query = request.getParameter("query");
+				%>
+				Search : <input type="text" name="query" value="<%out.println(query);%>"> <input
+					type="submit" value="search">
 			</div>
 		</form>
 		<div>
 			<%
 				DB db = new DB();
 				HashMap<Integer, String> posts;
-				String query = request.getParameter("query");
 				if (query == null || query.length() < 1) {
 					posts = db.listPost();
 				} else {

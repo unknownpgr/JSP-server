@@ -11,6 +11,7 @@
 </head>
 
 <body>
+	<a href="./">Go to Home</a>
 	<%
 		if (session.getAttribute("LOGIN") == null) {
 			response.sendRedirect("./login.jsp");
