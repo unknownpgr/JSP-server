@@ -15,9 +15,6 @@
 			response.sendRedirect("./login.jsp");
 		}
 	%>
-	<div>
-		<a href="./logout.jsp">Logout</a>
-	</div>
 	<form action="./write_submit.jsp" method="POST">
 		<div>
 			<input type="text" name="title">

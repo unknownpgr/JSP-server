@@ -25,9 +25,12 @@
 			<div>
 				<%
 					String query = request.getParameter("query");
+					if (query == null)
+						query = "";
 				%>
-				Search : <input type="text" name="query" value="<%out.println(query);%>"> <input
-					type="submit" value="search">
+				Search : <input type="text" name="query"
+					value="<%out.println(query);%>"> <input type="submit"
+					value="search">
 			</div>
 		</form>
 		<div>
